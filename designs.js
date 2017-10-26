@@ -16,6 +16,18 @@ $(() => {
 		}
 	}
 
+	$('#pixel_canvas').on('click', '.pixel', (e) => {
+		let color = $('#colorPicker').val();
+		let pixels = $('.pixel');
+
+		for (const pixel of pixels)
+			if (e.target == pixel) {
+				//a flag to check if the pixel is already drawed
+				$(pixel).attr('drawed', 'true');
+				$(pixel).css('background-color', color);
+			}
+	});
+
 	$('#sizePicker').submit((e) => {
 		//Prevent reloading on submit
 		e.preventDefault();
