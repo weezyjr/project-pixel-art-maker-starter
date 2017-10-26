@@ -1,10 +1,11 @@
-// Select color input
-// Select size input
-
-// When size is submitted by the user, call makeGrid()
-
-function makeGrid() {
-
-// Your code goes here!
-
-}
+$(() => {
+	function makeGrid() {
+		
+	}
+	
+	$('#sizePicker').submit((e)=>{
+		//Prevent reloading on submit
+		e.preventDefault();
+		makeGrid();
+	});
+});
