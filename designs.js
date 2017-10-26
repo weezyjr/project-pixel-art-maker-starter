@@ -28,6 +28,27 @@ $(() => {
 			}
 	});
 
+	$('#pixel_canvas').on('mouseenter', '.pixel', (e) => {
+		let color = $('#colorPicker').val();
+		let pixels = $('.pixel');
+
+		for (const pixel of pixels)
+			if (e.target == pixel && $(pixel).attr('drawed') != 'true') {
+				$(pixel).css('background-color', color);
+			}
+
+	});
+
+	$('#pixel_canvas').on('mouseleave', '.pixel', (e) => {
+		let pixels = $('.pixel');
+
+		for (const pixel of pixels)
+			if (e.target == pixel && $(pixel).attr('drawed') != 'true') {
+				$(pixel).css('background-color', 'initial');
+			}
+
+	});
+
 	$('#sizePicker').submit((e) => {
 		//Prevent reloading on submit
 		e.preventDefault();
