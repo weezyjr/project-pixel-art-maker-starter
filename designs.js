@@ -25,6 +25,7 @@ $(() => {
 				//a flag to check if the pixel is already drawed
 				$(pixel).attr('drawed', 'true');
 				$(pixel).css('background-color', color);
+				$(pixel).css('opacity', '1');
 			}
 	});
 
@@ -35,6 +36,7 @@ $(() => {
 		for (const pixel of pixels)
 			if (e.target == pixel && $(pixel).attr('drawed') != 'true') {
 				$(pixel).css('background-color', color);
+				$(pixel).css('opacity', '0.7');
 			}
 
 	});
@@ -45,6 +47,7 @@ $(() => {
 		for (const pixel of pixels)
 			if (e.target == pixel && $(pixel).attr('drawed') != 'true') {
 				$(pixel).css('background-color', 'initial');
+				$(pixel).css('opacity', '1');
 			}
 
 	});
