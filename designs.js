@@ -34,7 +34,7 @@ function makeGrid(w, h) {
 $('#sizePicker').submit((e) => {
 	//Prevent reloading on submit
 	e.preventDefault();
-	$('#pixel_canvas').table.children().empty();
+	$('#pixel_canvas').children().empty();
 	const width = $('#input_width').val();
 	const height = $('#input_height').val();
 	makeGrid(width, height);
