@@ -12,7 +12,6 @@ function makeGrid(w, h) {
 					$(pixel).attr('drawed', 'true');
 					$(pixel).css('background-color', color);
 					$(pixel).css('opacity', '1');
-
 				},
 				mouseenter: () => {
 					const color = $('#colorPicker').val();
